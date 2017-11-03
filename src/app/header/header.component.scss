@@ -1,0 +1,21 @@
+@import '~sass/variables';
+
+:host {
+  height: 50px;
+}
+
+.container-fluid {
+  border-bottom: 1px solid black;
+}
+
+.row {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.login-btn {
+  padding: 0 22px;
+  height: 30px;
+}
+

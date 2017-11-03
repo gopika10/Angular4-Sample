@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  appName= "Sample";
+  loginClicked = false;
   constructor() { }
 
   ngOnInit() {
   }
 
+  onLogin() {
+    this.loginClicked = true;
+    console.log(this.loginClicked);
+  }
 }
