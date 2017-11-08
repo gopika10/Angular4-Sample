@@ -4,6 +4,14 @@
       {{appName}}
       <span class="sr-only" [innerText]="appName"></span>
     </h3>
+    <ul class="nav">
+      <li class="nav-item" role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link" routerLink="/">Home</a> <!-- routerLink w/o [] just takes string input of the route -->
+      </li>
+      <li class="nav-item" role="presentation" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/users']">Users</a> <!-- [routerLink] used for passing paramenter and using a variable to set route -->
+      </li>
+    </ul>
     <button type="button" class="btn btn-primary login-btn" (click)="onLogin()">Login</button>
   </div>
 </div>

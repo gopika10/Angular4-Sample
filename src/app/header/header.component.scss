@@ -19,3 +19,12 @@
   height: 30px;
 }
 
+.nav-item {
+  &.active {
+    border-bottom: 1px solid black;
+  }
+}
+
+.nav-link {
+  color: black;
+}
