@@ -14,7 +14,8 @@ import { EditUserComponent } from './users/edit-user/edit-user.component';
 const appRoutes: Routes = [
   {path: '', component: HomeComponent },
   {path: 'users', component: UsersComponent },
-  {path: 'users/:id/:name', component: UserComponent }
+  {path: 'users/:id', component: UserComponent },
+  {path: 'users/:id/edit', component: EditUserComponent }
 ];
 
 // @ngmodule and likes are a called decorator in angular, they start with @ sign
