@@ -9,13 +9,13 @@ import { FooterComponent } from './footer/footer.component';
 import { UsersComponent } from './users/users.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './users/user/user.component';
-import { EditUserComponent } from './users/edit-user/edit-user.component';
+import { UserDetailTableComponent } from './users/user-detail-table/user-detail-table.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent },
   {path: 'users', component: UsersComponent },
   {path: 'users/:id', component: UserComponent },
-  {path: 'users/:id/edit', component: EditUserComponent }
+  {path: 'users/:id/edit', component: UserComponent }
 ];
 
 // @ngmodule and likes are a called decorator in angular, they start with @ sign
@@ -27,7 +27,7 @@ const appRoutes: Routes = [
     UsersComponent,
     HomeComponent,
     UserComponent,
-    EditUserComponent
+    UserDetailTableComponent
   ],
   imports: [
     BrowserModule,

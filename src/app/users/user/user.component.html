@@ -1,3 +1,10 @@
 <p>
   User ID : {{ user.id }}
+  <a *ngIf="!editMode" [routerLink]="['/users', user.id, 'edit']">Edit</a>
 </p>
+
+<div class="row" *ngIf="editMode">
+  <div class="col-md-12">
+    <input [(ngModel)]="user.id" type="text" class="form-control" placeholder="User ID">
+  </div>
+</div>

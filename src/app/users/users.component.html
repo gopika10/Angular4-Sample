@@ -5,7 +5,13 @@
         <a [routerLink]="['/users', user.id]">{{user.id}} : {{user.name}}</a>
       </div>
       <div class="col-md-6">
+        <button class="btn btn-secondary" type="button">Details</button>
         <button class="btn btn-primary" (click)="onEdit(user.id)">Edit</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <app-user-detail-table [user]="user"></app-user-detail-table>
       </div>
     </div>
   </ul>
