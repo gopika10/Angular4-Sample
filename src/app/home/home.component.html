@@ -1,4 +1,11 @@
 <div>
-  home works!
-  <button (click)="loadUsers()" class="btn-primary btn">Load Users</button>
+  <button (click)="loadProjects()" type="button" class="btn btn-outline-secondary" placement="bottom"
+          ngbPopover="Create your first project." #p="ngbPopover" triggers="click">
+    +
+  </button>
+  <hr>
+  <div *ngIf="projects">Projects Visible
+    <app-projects [projects]="projects"></app-projects>
+
+  </div>
 </div>

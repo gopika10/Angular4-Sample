@@ -1,0 +1,45 @@
+
+<div class="details-wrapper d-flex">
+
+  <nav class="sidebar">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+      <h3>Collapsible Sidebar</h3></div>
+
+    <!-- Sidebar Links -->
+    <ul class="list-unstyled components">
+
+      <li><!-- Link with dropdown items -->
+        <a [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample" (click)="isCollapsed = !isCollapsed">My Scenarios</a>
+        <ul class=" list-unstyled" id="collapseExample" [ngbCollapse]="isCollapsed">
+          <li class="active">Scenario -- {{project.scenario.name}}</li>
+          <li>+ Add new scenario</li>
+        </ul>
+      <li>Compare</li>
+      <li>Favorites</li>
+    </ul>
+  </nav>
+
+  <div id="content">
+    <p>
+      {{project.name}}
+    </p>
+
+    <ngb-tabset>
+      <ngb-tab *ngFor="let scenarioLink of project.scenario.links">
+        <ng-template ngbTabTitle>{{scenarioLink}}</ng-template>
+        <ng-template ngbTabContent>Wow, I see there are 20,424,424,011 possible solutions to combine materials and technologies in this scenario.
+          Don‘t worry. I can help you find the best solution
+          – tailor-made to meet your goals.
+
+          You have 1 optimization run free in your trial plan.
+          <button class="btn btn-primary">Start Optimization</button>
+          Estimated server run time: approx. 48:00 h
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>
+
+
+  </div>
+
+</div>

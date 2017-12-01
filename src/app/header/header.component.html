@@ -1,17 +1,18 @@
 <div class="container-fluid">
 	<div class="row">
-    <h3>
-      {{appName}}
+    <h5>
+      <span>Logo</span>
+      <a class="nav-link" [routerLink]="['/users']">{{appName}}</a>
       <span class="sr-only" [innerText]="appName"></span>
-    </h3>
-    <ul class="nav">
-      <li class="nav-item" role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-        <a class="nav-link" routerLink="/">Home</a> <!-- routerLink w/o [] just takes string input of the route -->
-      </li>
-      <li class="nav-item" role="presentation" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/users']">Users</a> <!-- [routerLink] used for passing paramenter and using a variable to set route -->
-      </li>
-    </ul>
-    <button type="button" class="btn btn-primary login-btn" (click)="onLogin()">Login</button>
+    </h5>
+    <div class="clearfix"></div>
+    <h3>My Projects</h3>
+    <div ngbDropdown>
+      <a id="profileMenu" ngbDropdownToggle>Tariq Kaddoura</a>
+      <div ngbDropdownMenu aria-labelledby="profileMenu">
+        <a class="dropdown-item" href="#">Account Details</a>
+        <a class="dropdown-item" href="#">Logout</a>
+      </div>
+    </div>
   </div>
 </div>
